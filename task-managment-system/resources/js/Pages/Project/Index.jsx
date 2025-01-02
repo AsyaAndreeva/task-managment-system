@@ -4,7 +4,6 @@ import TextInput from "@/Components/TextInput";
 import { PROJECT_STATUS_CLASS_MAP, PROJECT_STATUS_TEXT_MAP } from "@/constants";
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
 import { Head, Link, router } from "@inertiajs/react";
-import { ChevronUpIcon, ChevronDownIcon } from "@heroicons/react/16/solid";
 import TableHeading from "@/Components/TableHeading";
 
 export default function Index({ auth, projects, queryParams = null }) {
@@ -149,7 +148,11 @@ export default function Index({ auth, projects, queryParams = null }) {
                         <td className="px-3 py-2">
                           <img src={project.image_path} style={{ width: 60 }} />
                         </td>
-                        <td className="px-3 py-2">{project.name}</td>
+                        <th className="px-3 py-2 text-gray-100 text-nowrap hover:underline">
+                          <Link href={route('project.show', project.id)}>
+                          {project.name}
+                          </Link>
+                        </th>
                         <td className="px-3 py-2">
                           <span
                             className={
