@@ -147,13 +147,13 @@ export default function TasksTable({ tasks ,queryParams = null, hideProjectColum
                 <td className="px-3 py-2">
                   <Link
                     href={route("task.edit", task.id)}
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline mx-l"
+                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline mx-1"
                   >
                     Edit
                   </Link>
                   <Link
                     href={route("task.destroy", task.id)}
-                    className="font-medium text-red-600 dark:text-red-500 hover:underline mx-l"
+                    className="font-medium text-red-600 dark:text-red-500 hover:underline mx-1"
                   >
                     Delete
                   </Link>

@@ -7,7 +7,7 @@ import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
 import { Head, Link, useForm } from "@inertiajs/react";
 
 export default function Edit({ auth, project }) {
-  const { data, setData, post, errors, reser } = useForm({
+  const { data, setData, post, errors, reset } = useForm({
     image: "",
     name: project.name || "",
     status: project.status || "",
